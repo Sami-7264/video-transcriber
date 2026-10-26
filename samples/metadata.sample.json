@@ -1,0 +1,38 @@
+{
+  "filename": "animation.gif",
+  "width": 640,
+  "height": 360,
+  "frame_count": 150,
+  "duration_ms": 5000,
+  "fps": 30.0,
+  "loop_count": 0,
+  "gif_version": "GIF89a",
+  "mode": "P",
+  "has_transparency": true,
+  "frames": [
+    {
+      "index": 1,
+      "filename": "frame_000001.png",
+      "duration_ms": 33,
+      "timestamp_ms": 0
+    },
+    {
+      "index": 2,
+      "filename": "frame_000002.png",
+      "duration_ms": 33,
+      "timestamp_ms": 33
+    },
+    {
+      "index": 3,
+      "filename": "frame_000003.png",
+      "duration_ms": 33,
+      "timestamp_ms": 66
+    },
+    {
+      "index": 150,
+      "filename": "frame_000150.png",
+      "duration_ms": 33,
+      "timestamp_ms": 4917
+    }
+  ]
+}

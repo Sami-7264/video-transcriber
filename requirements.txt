@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------------------
+# Core runtime dependencies for the Video Transcriber CLI.
+#
+#   pip install -r requirements.txt
+#
+# FFmpeg is an EXTERNAL system dependency and is NOT installed via pip.
+# See the README for platform-specific FFmpeg installation instructions.
+# ---------------------------------------------------------------------------
+
+faster-whisper>=1.0.0      # CTranslate2-backed Whisper inference (fast, local)
+typer>=0.12.0              # Declarative CLI framework
+rich>=13.7.0              # Pretty console output, tables, progress bars
+tqdm>=4.66.0              # Fallback / batch-level progress bars
+Pillow>=10.0.0            # GIF decoding / frame extraction (app.gif module)
+
+# ---------------------------------------------------------------------------
+# Optional extras (speaker diarization, local-LLM summaries) are intentionally
+# kept out of this file so the base install stays light and dependency-free of
+# a multi-gigabyte PyTorch download. Install them on demand with:
+#
+#   pip install -r requirements-optional.txt
+# ---------------------------------------------------------------------------

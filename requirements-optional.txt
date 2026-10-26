@@ -1,0 +1,14 @@
+# ---------------------------------------------------------------------------
+# OPTIONAL extras. None of these are required for core transcription.
+# Each feature degrades gracefully (with a helpful message) when missing.
+#
+#   pip install -r requirements-optional.txt
+# ---------------------------------------------------------------------------
+
+# Speaker diarization ("who spoke when"). Pulls in PyTorch.
+# Also requires a free Hugging Face token with access to the pyannote models.
+pyannote.audio>=3.1.0
+
+# Local LLM summaries via the Ollama server (https://ollama.com).
+# `ollama` is a thin HTTP client; you must run the Ollama daemon separately.
+ollama>=0.3.0

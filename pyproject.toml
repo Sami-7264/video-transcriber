@@ -1,0 +1,42 @@
+[project]
+name = "video-transcriber"
+version = "1.0.0"
+description = "Local, GPU-aware video/audio transcription CLI built on Faster Whisper."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "faster-whisper>=1.0.0",
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "tqdm>=4.66.0",
+    "Pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+diarization = ["pyannote.audio>=3.1.0"]
+summaries = ["ollama>=0.3.0"]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0", "mypy>=1.10.0"]
+
+[project.scripts]
+transcribe = "app.cli:run"
+extract-frames = "app.gif.cli:run"
+contact-sheet = "app.gif.cli:run_contact_sheet"
+media = "main:run"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = false
